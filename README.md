@@ -2,24 +2,35 @@
 
 **Repository:** [https://github.com/shravanxd/library_fda_api_test.git](https://github.com/shravanxd/library_fda_api_test.git)
 
-## 1. Project Overview
+## 1. Executive Summary
 
-This project contains Python scripts designed to establish and demonstrate connectivity with the OCLC FAST (Faceted Application of Subject Terminology) API and the Library of Congress Subject Headings (LCSH) API.
+### What We Did
+We successfully established a connection between our local digital environment and two major bibliographic authorities: the **Library of Congress (LCSH)** and **OCLC FAST**. By building custom automated tools, we proved that we can search these massive databases programmatically without manual intervention.
 
-The primary goal is to confirm that the local environment can successfully reach these external services using standard HTTP requests. This validation ensures that downstream applications can reliably fetch authority records and subject suggestions.
+### How We Did It
+We developed a set of specialized scripts that act as a bridge. These scripts send search terms (like "climate change" or "abuse") directly to the authority servers and retrieve the most relevant standardized subject headings. We then created an automated workflow to organize these results into a clear, side-by-side spreadsheet for easy human review.
+
+### Why This Is Useful
+*   **Assessment Ready**: We validated that we can retrieve high-quality Library of Congress data (including official labels and permanent links/URIs) for any given list of terms.
+*   **Efficiency**: Instead of searching for terms one by one, we can now process hundreds of terms in seconds.
+*   **Accuracy**: This direct connection ensures we are always getting the most up-to-date authoritative data, reducing errors in cataloging and metadata creation.
+
+---
+
+## 2. Technical Overview
 
 The project consists of two main scripts:
 *   `fast_api_test.py`: A diagnostic tool to verify working connectivity to FAST endpoints.
 *   `fast_batch_search.py`: A bulk assessment tool that generates a comprehensive spreadsheet comparing LCSH and FAST matches side-by-side.
 
-## 2. Prerequisites
+## 3. Prerequisites
 
 To run these scripts, you need a Python 3 environment installed on your system. The scripts rely on the following external libraries:
 
 *   `requests`: For making HTTP calls to the APIs.
 *   `pandas`: For data manipulation and exporting results to CSV.
 
-## 3. Installation
+## 4. Installation
 
 1.  Ensure Python 3 is installed. You can check this by running:
     ```bash
@@ -31,7 +42,7 @@ To run these scripts, you need a Python 3 environment installed on your system. 
     pip install requests pandas
     ```
 
-## 4. Usage & Script Analysis
+## 5. Usage & Script Analysis
 
 ### 4.1. fast_api_test.py
 
@@ -63,7 +74,7 @@ python3 fast_batch_search.py
 *   Console preview of the assessment data.
 *   `assessment_results.csv`: The complete dataset ready for review.
 
-## 5. Output Examples and Capabilities
+## 6. Output Examples and Capabilities
 
 The following sections display the actual output captured from running these scripts, demonstrating successful integration.
 
@@ -129,6 +140,6 @@ Complete assessment spreadsheet exported to 'assessment_results.csv'
 *   **LCSH Matching**: The `LCSH_Label_1` and `LCSH_URI_1` columns provide the specific authority data needed for validation.
 *   **Assessment Ready**: The "wide" format allows for immediate comparison between the input term, the primary LCSH match, and the corresponding FAST term without needing to cross-reference multiple rows.
 
-## 6. Conclusion
+## 7. Conclusion
 
 The execution of these scripts confirms that the environment is correctly configured to interact with external bibliographic APIs. Both `fast.oclc.org` and `id.loc.gov` are accessible, allowing for the seamless retrieval of subject headings and authority data.
