@@ -1,0 +1,119 @@
+search_term,label,type,uri,source
+abuse,Abuse,,,FAST
+abuse,child abuse,,,FAST
+abuse,Abused men,,,FAST
+abuse,Abuse of,LCSH,http://id.loc.gov/authorities/subjects/sh99002071,LCSH
+abuse,Abuse of administrative power,LCSH,http://id.loc.gov/authorities/subjects/sh85000274,LCSH
+abuse,Abuse of administrative power (Roman law),LCSH,http://id.loc.gov/authorities/subjects/sh85000275,LCSH
+education,Education,,,FAST
+education,Education,,,FAST
+education,Education,,,FAST
+education,Education,LCSH,http://id.loc.gov/authorities/subjects/sh99005758,LCSH
+education,Education (Christian theology),LCSH,http://id.loc.gov/authorities/subjects/sh85041088,LCSH
+education,Education (Continuing education),LCSH,http://id.loc.gov/authorities/subjects/sh99005759,LCSH
+immigration,Immigration,,,FAST
+immigration,Immigration,,,FAST
+immigration,Immigration,,,FAST
+immigration,Immigration advocates,LCSH,http://id.loc.gov/authorities/subjects/sh98002548,LCSH
+immigration,Immigration consultants,LCSH,http://id.loc.gov/authorities/subjects/sh85064520,LCSH
+immigration,"Immigration consultants--Legal status, laws, etc.",LCSH,http://id.loc.gov/authorities/subjects/sh85064521,LCSH
+gender,Gender,,,FAST
+gender,Gender,,,FAST
+gender,Genders,,,FAST
+gender,Gender,LCSH,http://id.loc.gov/authorities/subjects/sh00002547,LCSH
+gender,Gender (Grammar),LCSH,http://id.loc.gov/authorities/subjects/sh85053729,LCSH
+gender,Gender (Musical instrument),LCSH,http://id.loc.gov/authorities/subjects/sh85053730,LCSH
+climate change,Changes in climate,,,FAST
+climate change,Climate change,,,FAST
+climate change,Climate changes,,,FAST
+climate change,Climate change adaptation,LCSH,http://id.loc.gov/authorities/subjects/sh2023002666,LCSH
+climate change,Climate change insurance,LCSH,http://id.loc.gov/authorities/subjects/sh2010012934,LCSH
+climate change,Climate change insurance--Law and legislation,LCSH,http://id.loc.gov/authorities/subjects/sh2010012935,LCSH
+artificial intelligence,Artificial intelligence,,,FAST
+artificial intelligence,Artificial intelligence,,,FAST
+artificial intelligence,DAI (Artificial intelligence),,,FAST
+artificial intelligence,Artificial intelligence,LCSH,http://id.loc.gov/authorities/subjects/sh85008180,LCSH
+artificial intelligence,Artificial intelligence in literature,LCSH,http://id.loc.gov/authorities/subjects/sh93008524,LCSH
+artificial intelligence,Artificial intelligence in motion pictures,LCSH,http://id.loc.gov/authorities/subjects/sh2024000933,LCSH
+democracy,Democracy,,,FAST
+democracy,Democracy,,,FAST
+democracy,Democracy,,,FAST
+democracy,Democracy,LCSH,http://id.loc.gov/authorities/subjects/sh85036647,LCSH
+democracy,Democracy Day,LCSH,http://id.loc.gov/authorities/subjects/sh92004291,LCSH
+democracy,Democracy and architecture,LCSH,http://id.loc.gov/authorities/subjects/sh2005002572,LCSH
+mental health,Mental health,,,FAST
+mental health,Mental health,,,FAST
+mental health,Mental health,,,FAST
+mental health,Mental health,LCSH,http://id.loc.gov/authorities/subjects/sh85083615,LCSH
+mental health,Mental health boards,LCSH,http://id.loc.gov/authorities/subjects/sh85083618,LCSH
+mental health,Mental health boards--Law and legislation,LCSH,http://id.loc.gov/authorities/subjects/sh96008429,LCSH
+sustainability,Sustainability,,,FAST
+sustainability,Sustainability,,,FAST
+sustainability,Sustainability,,,FAST
+sustainability,Sustainability,LCSH,http://id.loc.gov/authorities/subjects/sh2009000375,LCSH
+human rights,Human Rights Day,,,FAST
+human rights,Human Rights Day,,,FAST
+human rights,Human Rights Day,,,FAST
+human rights,Human Rights Day,LCSH,http://id.loc.gov/authorities/subjects/sh2003003531,LCSH
+human rights,Human Rights and Democracy Awards,LCSH,http://id.loc.gov/authorities/subjects/sh2012001520,LCSH
+human rights,Human rights,LCSH,http://id.loc.gov/authorities/subjects/sh85026379,LCSH
+globalization,Globalization,,,FAST
+globalization,Globalization,,,FAST
+globalization,Globalization,,,FAST
+globalization,Globalization,LCSH,http://id.loc.gov/authorities/subjects/sh99010179,LCSH
+globalization,Globalization and tourism,LCSH,http://id.loc.gov/authorities/subjects/sh2021001568,LCSH
+globalization,Globalization in art,LCSH,http://id.loc.gov/authorities/subjects/sh2008004593,LCSH
+poverty,Poverty,,,FAST
+poverty,Poverty,,,FAST
+poverty,Poverty,,,FAST
+poverty,Poverty,LCSH,http://id.loc.gov/authorities/subjects/sh85105939,LCSH
+poverty,Poverty Point State Park (La.),LCSH,http://id.loc.gov/authorities/subjects/sh00002185,LCSH
+poverty,Poverty Point culture,LCSH,http://id.loc.gov/authorities/subjects/sh85105952,LCSH
+racism,Racism,,,FAST
+racism,Racism,,,FAST
+racism,Racism,,,FAST
+racism,Racism,LCSH,http://id.loc.gov/authorities/subjects/sh85110266,LCSH
+racism,Racism against Asians,LCSH,http://id.loc.gov/authorities/subjects/sh2021003012,LCSH
+racism,Racism against Black people,LCSH,http://id.loc.gov/authorities/subjects/sh2021004146,LCSH
+social media,Social media in art,,,FAST
+social media,Social media,,,FAST
+social media,Social media,,,FAST
+social media,Social media,LCSH,http://id.loc.gov/authorities/subjects/sh2006007023,LCSH
+social media,Social media addiction,LCSH,http://id.loc.gov/authorities/subjects/sh2014001723,LCSH
+social media,Social media and college students,LCSH,http://id.loc.gov/authorities/subjects/sh2021006780,LCSH
+pandemic,Pandemics,,,FAST
+pandemic,Pandemics in art,,,FAST
+pandemic,COVID-19 Pandemic (2020-),,,FAST
+pandemic,Pandemics,LCSH,http://id.loc.gov/authorities/subjects/sh2021008231,LCSH
+pandemic,Pandemics in art,LCSH,http://id.loc.gov/authorities/subjects/sh2024000221,LCSH
+pandemic,Pandemics in literature,LCSH,http://id.loc.gov/authorities/subjects/sh2023000326,LCSH
+epidemiology,Epidemiology,,,FAST
+epidemiology,Epidemiology,,,FAST
+epidemiology,Epidemiology,,,FAST
+epidemiology,Epidemiology,LCSH,http://id.loc.gov/authorities/subjects/sh85044373,LCSH
+epidemiology,Epidemiology--Congresses,LCSH,http://id.loc.gov/authorities/subjects/sh2008119830,LCSH
+epidemiology,Epidemiology--Mathematical models,LCSH,http://id.loc.gov/authorities/subjects/sh2009125068,LCSH
+genetics,Genetics,,,FAST
+genetics,Genetics,,,FAST
+genetics,Genetics,,,FAST
+genetics,Genetics,LCSH,http://id.loc.gov/authorities/subjects/sh85053877,LCSH
+genetics,Genetics in art,LCSH,http://id.loc.gov/authorities/subjects/sh96011640,LCSH
+genetics,Genetics in literature,LCSH,http://id.loc.gov/authorities/subjects/sh2022007490,LCSH
+philosophy,Philosophy,,,FAST
+philosophy,Philosophy,,,FAST
+philosophy,Philosophy,,,FAST
+philosophy,Philosophy,LCSH,http://id.loc.gov/authorities/subjects/sh99005065,LCSH
+philosophy,Philosophy and aesthetics,LCSH,http://id.loc.gov/authorities/subjects/sh2014002232,LCSH
+philosophy,Philosophy and civilization,LCSH,http://id.loc.gov/authorities/subjects/sh85100998,LCSH
+history,History,,,FAST
+history,History,,,FAST
+history,History,,,FAST
+history,History,LCSH,http://id.loc.gov/authorities/subjects/sh85061212,LCSH
+history,History and criticism,LCSH,http://id.loc.gov/authorities/subjects/sh99001187,LCSH
+history,"History and criticism--Theory, etc.",LCSH,http://id.loc.gov/authorities/subjects/sh00006052,LCSH
+literature,Literature,,,FAST
+literature,Literature,,,FAST
+literature,Literature,,,FAST
+literature,Literature,LCSH,http://id.loc.gov/authorities/subjects/sh85077507,LCSH
+literature,Literature and anthropology,LCSH,http://id.loc.gov/authorities/subjects/sh85077563,LCSH
+literature,Literature and civil service,LCSH,http://id.loc.gov/authorities/subjects/sh2012004611,LCSH

@@ -1,0 +1,6 @@
+    words = [
+        "abuse", "education", "immigration", "gender", "climate change",
+        "artificial intelligence", "democracy", "mental health", "sustainability", "human rights",
+        "globalization", "poverty", "racism", "social media", "pandemic",
+        "epidemiology", "genetics", "philosophy", "history", "literature"
+    ]
