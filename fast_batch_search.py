@@ -80,37 +80,52 @@ if __name__ == "__main__":
         "epidemiology", "genetics", "philosophy", "history", "literature"
     ]
 
-    print(f"Searching for {len(words)} terms...")
-    all_results = []
-    for w in words:
-        # Get FAST results
-        fast_res = fast_top3(w)
-        for r in fast_res:
-             r["source"] = "FAST" # Add source to distinguish
-        all_results.extend(fast_res)
-        
-        # Get LCSH results
-        lcsh_res = lcsh_search(w)
-        for r in lcsh_res:
-             r["source"] = "LCSH"
-        all_results.extend(lcsh_res)
-
-    df = pd.DataFrame(all_results)
+    print(f"Generating Assessment Spreadsheet for {len(words)} terms...")
     
-    # Drop columns that are completely empty (all None/NaN)
-    df.dropna(axis=1, how='all', inplace=True)
+    assessment_data = []
+
+    for w in words:
+        row = {"Search Term": w}
+        
+        # --- LCSH Results (Priority) ---
+        lcsh_res = lcsh_search(w)
+        # Add top 3 LCSH matches to the row
+        for i in range(3):
+            suffix = f"_{i+1}"
+            if i < len(lcsh_res):
+                row[f"LCSH_Label{suffix}"] = lcsh_res[i].get("label")
+                row[f"LCSH_URI{suffix}"] = lcsh_res[i].get("uri")
+            else:
+                row[f"LCSH_Label{suffix}"] = None
+                row[f"LCSH_URI{suffix}"] = None
+
+        # --- FAST Results ---
+        fast_res = fast_top3(w)
+        # Add top 3 FAST matches to the row
+        for i in range(3):
+            suffix = f"_{i+1}"
+            if i < len(fast_res):
+                row[f"FAST_Label{suffix}"] = fast_res[i].get("label")
+                # FAST suggest endpoint doesn't give URIs/IDs cleanly, so just Label
+            else:
+                row[f"FAST_Label{suffix}"] = None
+
+        assessment_data.append(row)
+
+    # Create DataFrame
+    df = pd.DataFrame(assessment_data)
     
     # improved display settings for terminal
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', 1000)
-    pd.set_option('display.max_colwidth', None)
+    pd.set_option('display.max_colwidth', 20)
     
-    print("\n--- Search Results ---")
-    print(df)
+    print("\n--- Assessment Spreadsheet Preview ---")
+    print(df[["Search Term", "LCSH_Label_1", "LCSH_URI_1", "FAST_Label_1"]].head())
     
     # Export to CSV
-    csv_filename = "fast_search_results.csv"
+    csv_filename = "assessment_results.csv"
     df.to_csv(csv_filename, index=False)
-    print(f"\nResults exported to '{csv_filename}'")
+    print(f"\nComplete assessment spreadsheet exported to '{csv_filename}'")
     
     print("\nDone.")
