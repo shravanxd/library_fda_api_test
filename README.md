@@ -10,7 +10,7 @@ The primary goal is to confirm that the local environment can successfully reach
 
 The project consists of two main scripts:
 *   `fast_api_test.py`: A diagnostic tool to verify working connectivity to FAST endpoints.
-*   `fast_batch_search.py`: A bulk search utility to query both FAST and LCSH for a list of terms.
+*   `fast_batch_search.py`: A bulk assessment tool that generates a comprehensive spreadsheet comparing LCSH and FAST matches side-by-side.
 
 ## 2. Prerequisites
 
@@ -47,7 +47,12 @@ The script prints the status of the request to the console, verifying that the A
 
 ### 4.2. fast_batch_search.py
 
-This script takes a list of terms (defined in the `words` list within the script) and queries both FAST and LCSH APIs for each term, retrieving the top matches.
+This script generates a **Complete Assessment Spreadsheet** for a list of terms. It queries both the Library of Congress (LCSH) and FAST APIs and pivots the results into a single row per term.
+
+**Key Features:**
+*   **Side-by-Side Comparison**: FAST and LCSH matches are aligned in a single row.
+*   **LCSH Focus**: Prioritizes LCSH data, including Authoritative Labels and URIs for verification.
+*   **Wide Format**: Optimized for supervisor assessment in spreadsheet software.
 
 **How to Run:**
 ```bash
@@ -55,8 +60,8 @@ python3 fast_batch_search.py
 ```
 
 **Output:**
-*   Console output showing the DataFrame of results.
-*   A CSV file named `fast_search_results.csv` containing the aggregated data.
+*   Console preview of the assessment data.
+*   `assessment_results.csv`: The complete dataset ready for review.
 
 ## 5. Output Examples and Capabilities
 
@@ -101,40 +106,28 @@ Response Snippet:
 **Analysis:**
 *   **Search Endpoint (`fast.oclc.org`)**: **SUCCESS**. The environment can successfully reach the and suggest API. The server returned a valid JSON response with HTTP 200, confirming that the network configuration allows outbound traffic to OCLC services.
 
-### 5.2. Batch Search Results
+### 5.2. Assessment Spreadsheet Generation
 
-Running `fast_batch_search.py` with the expanded term list (20 terms):
+Running `fast_batch_search.py` produces the `assessment_results.csv` file. Below is a preview of the pivoted data structure, designed for thorough value assessment:
 
 ```text
-Searching for 20 terms...
+Generating Assessment Spreadsheet for 20 terms...
 
---- Search Results ---
-    search_term                          label  type                                                  uri source
-0         abuse                          Abuse  None                                                 None   FAST
-1         abuse                    child abuse  None                                                 None   FAST
-2         abuse                     Abused men  None                                                 None   FAST
-3         abuse                       Abuse of  LCSH    http://id.loc.gov/authorities/subjects/sh99002071   LCSH
-4         abuse  Abuse of administrative power  LCSH    http://id.loc.gov/authorities/subjects/sh85000274   LCSH
-..          ...                            ...   ...                                                  ...    ...
-113  literature                     Literature  None                                                 None   FAST
-114  literature                     Literature  None                                                 None   FAST
-115  literature                     Literature  LCSH    http://id.loc.gov/authorities/subjects/sh85077507   LCSH
-116  literature    Literature and anthropology  LCSH    http://id.loc.gov/authorities/subjects/sh85077563   LCSH
-117  literature   Literature and civil service  LCSH  http://id.loc.gov/authorities/subjects/sh2012004611   LCSH
+--- Assessment Spreadsheet Preview ---
+      Search Term         LCSH_Label_1           LCSH_URI_1        FAST_Label_1
+0           abuse             Abuse of  http://id.loc.go...               Abuse
+1       education            Education  http://id.loc.go...           Education
+2     immigration  Immigration advo...  http://id.loc.go...         Immigration
+3          gender               Gender  http://id.loc.go...              Gender
+4  climate change  Climate change a...  http://id.loc.go...  Changes in climate
 
-[118 rows x 5 columns]
-
-Results exported to 'fast_search_results.csv'
-
-Done.
+Complete assessment spreadsheet exported to 'assessment_results.csv'
 ```
 
 **Analysis:**
-*   **Successful Retrieval**: The script successfully queried both API endpoints for 20 terms, yielding 118 total suggestions.
-*   **Data Richness**:
-    *   **FAST**: Returns relevant subject labels (e.g., "Abuse", "child abuse").
-    *   **LCSH**: Returns comprehensive data, including the Label, Type ("LCSH"), and the full authoritative URI (e.g., `http://id.loc.gov/authorities/subjects/sh99002071`).
-*   **Connectivity**: The presence of mixed results confirms that the local environment can reach multiple external authority files (OCLC and LoC) simultaneously.
+*   **Thorough Assessment**: The output organizes 20 terms into a clear, assessable format.
+*   **LCSH Matching**: The `LCSH_Label_1` and `LCSH_URI_1` columns provide the specific authority data needed for validation.
+*   **Assessment Ready**: The "wide" format allows for immediate comparison between the input term, the primary LCSH match, and the corresponding FAST term without needing to cross-reference multiple rows.
 
 ## 6. Conclusion
 
